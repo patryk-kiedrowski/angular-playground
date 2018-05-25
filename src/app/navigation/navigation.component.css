@@ -1,0 +1,35 @@
+.nav-container
+{
+  width: 100%;
+  background: #2c2c2c;
+  height: 50px;
+}
+
+.nav-link
+{
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav-link:hover
+{
+  color: orangered;
+}
+
+ul
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: inherit;
+}
+
+li
+{
+  display: inline-block;
+  margin: 0 20px;
+}

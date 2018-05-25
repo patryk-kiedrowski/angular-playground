@@ -1,0 +1,15 @@
+  <h2 class="list-header">List of users:</h2>
+
+  <ol class="parent-list">
+    <li *ngFor="let user of users">
+      <ul class="child-list">
+        <h4 class="user-header">{{user.name}} {{user.surname}}</h4>
+        <li class="user-info">
+          <span class="attribute">id:</span> {{user.id}}
+        </li>
+        <li class="user-info">
+          <span class="attribute">email:</span> {{user.email}}
+        </li>
+      </ul>
+    </li>
+  </ol>

@@ -1,0 +1,46 @@
+.list-header
+{
+  text-align: center;
+  width: 100%;
+}
+
+.user-header
+{
+  margin-bottom: 0px;
+  display: block;
+  background: #2c2c2c;
+  width: 300px;
+  text-align: center;
+  color: white;
+  height: 30px;
+  line-height: 30px;
+}
+
+.child-list
+{
+  list-style-type: none;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  width: 300px;
+  padding-left: 0px;
+}
+
+.parent-list
+{
+  list-style-type: none;
+}
+
+.parent-list > li
+{
+  display: block;
+  margin: 0 auto;
+}
+
+.attribute
+{
+  font-weight: bold;
+}
+
+.user-info
+{
+  padding: 3px 10px;
+}

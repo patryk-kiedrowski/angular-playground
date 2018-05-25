@@ -1,0 +1,39 @@
+
+<h2 class="page-header">Add new user:</h2>
+<form>
+  <input [(ngModel)]="newUser.name" placeholder="name" name="name">
+  <input [(ngModel)]="newUser.surname" placeholder="surname" name="surname">
+  <input [(ngModel)]="newUser.sex" placeholder="gender" name="gender">
+  <input [(ngModel)]="newUser.email" placeholder="email" name="email">
+  <input [(ngModel)]="newUser.city" placeholder="city" name="city">
+  <input [(ngModel)]="newUser.street" placeholder="street" name="street">
+  <input [(ngModel)]="newUser.street_number" placeholder="street number" name="street number">
+</form>
+
+<!--<div>
+  <h2>New user info:</h2>
+  <p *ngIf="newUser.name"><strong>Name:</strong> {{newUser.name}}</p>
+  <p *ngIf="newUser.surname"><strong>Surname:</strong> {{newUser.surname}}</p>
+  <p *ngIf="newUser.sex"><strong>Gender:</strong> {{newUser.sex}}</p>
+  <p *ngIf="newUser.email"><strong>Email:</strong> {{newUser.email}}</p>
+  <p *ngIf="newUser.city"><strong>City:</strong> {{newUser.city}}</p>
+  <p *ngIf="newUser.street"><strong>Street:</strong> {{newUser.street_number}}, {{newUser.street}}</p>
+</div>-->
+
+<h2 class="page-header">New user card preview:</h2>
+
+<div class="new-user-container">
+  <h3 class="user-header">{{newUser.name}} {{newUser.surname}}</h3>
+    
+  <div class="user-info-container">
+    <img *ngIf="newUser.sex === 'female'" class="avatar" src="http://newsroom.almonds.com/sites/default/files/2015-12/avatar-placeholder-female_6_0.jpg" />
+
+    <img *ngIf="newUser.sex === 'male'" class="avatar" src="https://s.financesonline.com/media/themes/apps/images/img_placeholder_avatar.jpg" />
+    <div class="user-info">
+      <p *ngIf="newUser.email">{{newUser.email}}</p>
+      <p *ngIf="newUser.city"><strong>Address:</strong></p>
+      <p *ngIf="newUser.city">{{newUser.city}},</p>
+      <p *ngIf="newUser.street">{{newUser.street_number}} {{newUser.street}}</p>
+    </div>
+  </div>
+</div>

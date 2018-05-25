@@ -1,0 +1,17 @@
+<div class="flex-parent">
+  <div *ngFor="let user of users" class="flex-child">
+    <h3 class="user-header">{{user.name}} {{user.surname}}</h3>
+    
+    <div class="user-info-container">
+      <img *ngIf="user.sex === 'female'" class="avatar" src="http://newsroom.almonds.com/sites/default/files/2015-12/avatar-placeholder-female_6_0.jpg" />
+
+      <img *ngIf="user.sex === 'male'" class="avatar" src="https://s.financesonline.com/media/themes/apps/images/img_placeholder_avatar.jpg" />
+      <div class="user-info">
+        <p>{{user.email}}</p>
+        <p><strong>Address:</strong></p>
+        <p>{{user.city}},</p>
+        <p>{{user.street_number}} {{user.street}}</p>
+      </div>
+    </div>
+  </div>
+</div>
