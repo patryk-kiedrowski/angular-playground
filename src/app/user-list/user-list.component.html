@@ -1,7 +1,7 @@
   <h2 class="list-header">List of users:</h2>
 
   <ol class="parent-list">
-    <li *ngFor="let user of users">
+    <li *ngFor="let user of users; let i = index">
       <ul class="child-list">
         <h4 class="user-header">{{user.name}} {{user.surname}}</h4>
         <li class="user-info">
@@ -10,6 +10,7 @@
         <li class="user-info">
           <span class="attribute">email:</span> {{user.email}}
         </li>
+        <button class="delete-user"  (click)="deleteUser(i)">delete</button>
       </ul>
     </li>
   </ol>

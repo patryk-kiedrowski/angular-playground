@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
+import { ManageUsersService } from '../manage-users.service';
 
 @Component({
   selector: 'app-add-user-form',
@@ -7,10 +8,21 @@ import { User } from '../user';
   styleUrls: ['./add-user-form.component.css']
 })
 export class AddUserFormComponent implements OnInit {
-  newUser = new User(undefined, '', '', '', '', '', '', '');
-  constructor() { }
+  newId: number;
+  newUser = new User(this.newId, '', '', '', '', '', '', '');
+
+  constructor(private manageUsers: ManageUsersService) { }
 
   ngOnInit() {
+  }
+
+  addUser() {
+    this.assignId();
+    this.manageUsers.addUser(this.newUser);
+  }
+
+  assignId() {
+    this.newUser.id = this.manageUsers.assignId();
   }
 
 }

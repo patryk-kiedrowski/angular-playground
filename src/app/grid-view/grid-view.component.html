@@ -1,8 +1,8 @@
 <div class="flex-parent">
-  <div *ngFor="let user of users" class="flex-child">
-    <h3 class="user-header">{{user.name}} {{user.surname}}</h3>
-    
-    <div class="user-info-container">
+  <div *ngFor="let user of users; let i = index" class="flex-child" (click)="deleteUser(i)">
+    <h3 class="user-header" *ngIf="user.id !== undefined">{{user.name}} {{user.surname}}</h3>
+
+    <div class="user-info-container" *ngIf="user.id !== undefined">
       <img *ngIf="user.sex === 'female'" class="avatar" src="http://newsroom.almonds.com/sites/default/files/2015-12/avatar-placeholder-female_6_0.jpg" />
 
       <img *ngIf="user.sex === 'male'" class="avatar" src="https://s.financesonline.com/media/themes/apps/images/img_placeholder_avatar.jpg" />

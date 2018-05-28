@@ -76,3 +76,22 @@ p
 {
   margin: 0;
 }
+
+.add-user
+{
+  display: block;
+  margin: 20px auto 0px auto;
+  cursor: pointer;
+  width: 100px;
+  height: 20px;
+
+  border: 2px solid rgb(2, 194, 50);
+  background: transparent;
+  transition: all 200ms linear;
+}
+
+.add-user:hover
+{
+  background: rgb(2, 194, 50);
+  color: white;
+}
