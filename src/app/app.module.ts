@@ -10,6 +10,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import { GridViewComponent } from './grid-view/grid-view.component';
 import { ViewEncapsulation } from '@angular/core';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ViewEncapsulation } from '@angular/core';
     NavigationComponent,
     AddUserFormComponent,
     UserListComponent,
-    GridViewComponent
+    GridViewComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

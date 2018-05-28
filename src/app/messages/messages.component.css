@@ -1,0 +1,36 @@
+.messages
+{
+  width: 320px;
+  display: block;
+  margin: 0px auto;
+}
+
+h3
+{
+  text-align: center;
+}
+
+p
+{
+  border-left: 4px solid #2c2c2c;
+  padding-left: 20px;
+}
+
+.delete-user
+{
+  display: block;
+  margin: 10px auto 0px auto;
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+
+  border: 2px solid orangered;
+  background: transparent;
+  transition: all 100ms linear;
+}
+
+.delete-user:hover
+{
+  background: orangered;
+  color: white;
+}

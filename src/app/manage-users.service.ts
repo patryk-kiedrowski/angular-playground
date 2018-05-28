@@ -4,25 +4,34 @@ import { USERS } from './test-users';
 
 import { Observable, of } from 'rxjs';
 
+import { MessageService } from './message.service';
+
 @Injectable({
   providedIn: 'root'
 })
 
 export class ManageUsersService {
 
-  constructor() { }
+  constructor(private messageService: MessageService) { }
 
-  getUsers(): User[] {
+  /*getUsers(): User[] {
     return USERS;
+  }*/
+
+  getUsers(): Observable<User[]> {
+    this.messageService.add('Fetched users');
+    return of(USERS);
   }
 
-  addUser(user: User) {
+  addUser(user: User): void {
     // USERS.push(user);
     USERS.splice(user.id - 1, 0, user);
+    this.messageService.add('New user added successfully, id: ' + user.id);
   }
 
-  deleteUser(index: number) {
+  deleteUser(index: number): void {
     USERS.splice(index, 1);
+    this.messageService.add('User deleted successfully, free id: ' + (index + 1));
   }
 
   assignId(): number {

@@ -17,8 +17,12 @@ export class GridViewComponent implements OnInit {
     this.getUsers();
   }
 
-  getUsers() {
+  /*getUsers() {
     this.users = this.manageService.getUsers();
+  }*/
+
+  getUsers(): void {
+    this.manageService.getUsers().subscribe(users => this.users = users);
   }
 
   deleteUser(index) {

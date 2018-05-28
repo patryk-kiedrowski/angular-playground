@@ -19,6 +19,7 @@ export class AddUserFormComponent implements OnInit {
   addUser() {
     this.assignId();
     this.manageUsers.addUser(this.newUser);
+    this.newUser = new User(this.newId, '', '', '', '', '', '', '');
   }
 
   assignId() {

@@ -17,8 +17,12 @@ export class UserListComponent implements OnInit {
     this.getUsers();
   }
 
-  getUsers(): void {
+  /*getUsers(): void {
     this.users = this.manageService.getUsers();
+  }*/
+
+  getUsers(): void {
+    this.manageService.getUsers().subscribe(users => this.users = users);
   }
 
   deleteUser(index) {

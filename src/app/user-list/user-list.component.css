@@ -29,12 +29,13 @@
 .parent-list
 {
   list-style-type: none;
+  padding-left: 0px;
 }
 
 .parent-list > li
 {
   display: block;
-  margin: 0 auto;
+  margin-left: 25px;
 }
 
 .attribute
@@ -53,11 +54,11 @@
   margin: 10px auto 0px auto;
   cursor: pointer;
   width: 100px;
-  height: 20px;
+  height: 30px;
 
   border: 2px solid orangered;
   background: transparent;
-  transition: all 200ms linear;
+  transition: all 100ms linear;
 }
 
 .delete-user:hover
