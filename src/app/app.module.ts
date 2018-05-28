@@ -19,7 +19,7 @@ import { MessagesComponent } from './messages/messages.component';
     AddUserFormComponent,
     UserListComponent,
     GridViewComponent,
-    MessagesComponent
+    MessagesComponent,
   ],
   imports: [
     BrowserModule,
