@@ -14,6 +14,7 @@
   color: white;
   height: 30px;
   line-height: 30px;
+  border-radius: 5px 5px 0px 0px;
 }
 
 .child-list
@@ -24,6 +25,8 @@
   padding-left: 0px;
   position: relative;
   padding-bottom: 10px;
+  background: white;
+  border-radius: 5px;
 }
 
 .parent-list
@@ -59,6 +62,7 @@
   border: 2px solid orangered;
   background: transparent;
   transition: all 100ms linear;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
 
 .delete-user:hover
@@ -70,6 +74,7 @@
 .edit {
   border: 2px solid lightskyblue;
   color: black;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
 
 a {

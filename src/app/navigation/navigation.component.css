@@ -26,6 +26,7 @@ ul
   margin: 0;
   padding: 0;
   height: inherit;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
 
 li

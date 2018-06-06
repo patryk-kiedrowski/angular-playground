@@ -16,8 +16,15 @@ h1,h2,h3,h4,h5,h6, ol
 
 .wrapper
 {
-  padding: 20px;
-  display: block;
-  margin: 0 auto;
+  padding: 30px 100px 50px 100px;
+  margin: 30px auto;
   width: fit-content;
+  /*background: rgba(0,0,0,0.05);*/
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
 }

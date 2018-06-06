@@ -11,4 +11,22 @@
   <button class="add-user" (click)="updateUser()">edit user</button>
 </form>
 
+<form [formGroup]="editForm">
+
+  <div class="form-group">
+    <input class="form-control" placeholder="name" formControlName="name">
+    <input class="form-control" placeholder="surname" formControlName="surname">
+    <input class="form-control" placeholder="sex" formControlName="sex">
+    <input class="form-control" placeholder="email" formControlName="email">
+    <input class="form-control" placeholder="city" formControlName="city">
+    <input class="form-control" placeholder="street" formControlName="street">
+    <input class="form-control" placeholder="street_number" formControlName="street_number">
+
+    <button class="add-user" (click)="updateUser()">edit user</button>
+  </div>
+
+</form>
+
+<p>Name value: {{ editForm.value | json }}</p>
+
 <app-messages></app-messages>

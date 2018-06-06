@@ -3,7 +3,7 @@ form
   margin-bottom: 50px;
 }
 
-input
+input, .select
 {
   width: 200px;
   height: 30px;
@@ -28,6 +28,8 @@ input:focus
   box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
   display: block;
   margin: 0 auto;
+  background: white;
+  border-radius: 0px 0px 5px 5px;
 }
 
 .flex-child:hover
@@ -46,6 +48,7 @@ input:focus
   color: white;
   height: 30px;
   line-height: 30px;
+  border-radius: 5px 5px 0px 0px;
 }
 
 .user-info-container
@@ -84,10 +87,12 @@ p
   cursor: pointer;
   width: 100px;
   height: 30px;
+  border-radius: 4px;
 
   border: 2px solid rgb(2, 194, 50);
-  background: transparent;
+  background: white;
   transition: all 100ms linear;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
 
 .add-user:hover
@@ -99,4 +104,9 @@ p
 .page-header
 {
   text-align: center;
+}
+
+.select select
+{
+  display: none;
 }

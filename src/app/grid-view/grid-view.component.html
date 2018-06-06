@@ -1,3 +1,5 @@
+<h1 style="text-align: center;">- ZROBIĆ POP-UP Z ZAPYTANIEM CZY NA PEWNO USUNĄĆ</h1>
+
 <div class="flex-parent">
   <div *ngFor="let user of users; let i = index" class="flex-child" (click)="deleteUser(i)">
     <h3 class="user-header" *ngIf="user.id !== undefined">{{user.name}} {{user.surname}}</h3>

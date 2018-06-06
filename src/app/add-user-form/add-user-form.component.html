@@ -1,5 +1,7 @@
 
-<h2 class="page-header">Add new user:</h2>
+<!-- TEMPLATE-DRIVEN FORMS START -->
+
+<!--<h2 class="page-header">Add a new user:</h2>
 <form>
   <input [(ngModel)]="newUser.name" placeholder="name" name="name">
   <input [(ngModel)]="newUser.surname" placeholder="surname" name="surname">
@@ -10,9 +12,46 @@
   <input [(ngModel)]="newUser.street_number" placeholder="street number" name="street number">
 
   <button class="add-user" (click)="addUser()">add user</button>
+</form>-->
+
+<!-- TEMPLATE-DRIVEN FORMS END -->
+
+<h2 class="page-header">Add a new user (reactive form):</h2>
+
+<form [formGroup]="editForm">
+
+  <div class="form-group">
+    <input [ngClass]="(name.invalid == true && name.touched)? 'invalid' : ''" class="form-control" placeholder="name" formControlName="name">
+
+    <input [ngClass]="(surname.invalid == true && surname.touched)? 'invalid' : ''"  class="form-control" placeholder="surname" formControlName="surname">
+
+    <!--<input class="form-control" placeholder="sex" formControlName="sex">-->
+
+    <select [ngClass]="(sex.invalid == true && sex.touched)? 'invalid' : ''"  class="form-control select" formControlName="sex">
+      <option value="" disabled selected>gender</option>
+      <option>male</option>
+      <option>female</option>
+    </select>
+
+    <input [ngClass]="(email.invalid == true && email.touched)? 'invalid' : ''"  class="form-control" placeholder="email" formControlName="email">
+
+    <input [ngClass]="(city.invalid == true && city.touched)? 'invalid' : ''"  class="form-control" placeholder="city" formControlName="city">
+
+    <input [ngClass]="(street.invalid == true && street.touched)? 'invalid' : ''"  class="form-control" placeholder="street" formControlName="street">
+
+    <input [ngClass]="(street_number.invalid == true && street_number.touched)? 'invalid' : ''"  class="form-control" placeholder="street_number" formControlName="street_number">
+
+    <button class="add-user" (click)="addUserReactively()">add user</button>
+  </div>
+
 </form>
 
-<h2 class="page-header">New user card preview:</h2>
+<!--<p>Name value: {{ editForm.value | json }}</p>
+<p>Form status: {{ editForm.status | json }}</p>-->
+
+<!-- TEMPLATE-DRIVEN CARD PREVIEW START -->
+
+<!--<h2 class="page-header">New user card preview:</h2>
 
 <div class="new-user-container">
   <h3 class="user-header">{{newUser.name}} {{newUser.surname}}</h3>
@@ -26,6 +65,24 @@
       <p *ngIf="newUser.city"><strong>Address:</strong></p>
       <p *ngIf="newUser.city">{{newUser.city}},</p>
       <p *ngIf="newUser.street">{{newUser.street_number}} {{newUser.street}}</p>
+    </div>
+  </div>
+</div>-->
+
+<!-- TEMPLATE-DRIVEN CARD PREVIEW END -->
+
+<div class="new-user-container">
+  <h3 class="user-header">{{editForm.value.name}} {{editForm.value.surname}}</h3>
+
+  <div class="user-info-container">
+    <img *ngIf="editForm.value.sex === 'female'" class="avatar" src="http://newsroom.almonds.com/sites/default/files/2015-12/avatar-placeholder-female_6_0.jpg" />
+
+    <img *ngIf="editForm.value.sex === 'male'" class="avatar" src="https://s.financesonline.com/media/themes/apps/images/img_placeholder_avatar.jpg" />
+    <div class="user-info">
+      <p *ngIf="editForm.value.email">{{editForm.value.email}}</p>
+      <p *ngIf="editForm.value.city"><strong>Address:</strong></p>
+      <p *ngIf="editForm.value.city">{{editForm.value.city}},</p>
+      <p *ngIf="editForm.value.street">{{editForm.value.street_number}} {{editForm.value.street}}</p>
     </div>
   </div>
 </div>
