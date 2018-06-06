@@ -24,12 +24,11 @@ export class ManageUsersService {
   }
 
   getUser(index: number) {
-    this.messageService.add('Fetched user' + index);
+    this.messageService.add('Fetched user ' + index);
     return USERS[index];
   }
 
   addUser(user: User): void {
-    // USERS.push(user);
     USERS.splice(user.id - 1, 0, user);
     this.messageService.add('New user added successfully, id: ' + user.id);
   }

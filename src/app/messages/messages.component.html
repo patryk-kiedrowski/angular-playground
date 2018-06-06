@@ -4,7 +4,7 @@
 
   <button class="delete-user" (click)="messageService.clear()">Clear</button>
 
-  <p *ngFor='let message of messageService.messages'>
+  <p *ngFor='let message of messageService.messages?.reverse()'>
     {{ message }}
   </p>
 

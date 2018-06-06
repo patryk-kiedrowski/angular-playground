@@ -23,7 +23,6 @@ export class EditUserComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.manageService.getUser(this.index);
     this.updateIndex(+this.route.snapshot.paramMap.get('id'));
     this.user = this.manageService.getUser(this.index);
   }
