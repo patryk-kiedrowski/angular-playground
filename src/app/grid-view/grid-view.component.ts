@@ -10,6 +10,8 @@ import { ManageUsersService } from '../manage-users.service';
 })
 export class GridViewComponent implements OnInit {
   users: User[];
+  showPopUp = false;
+  selectedUser: number;
 
   constructor(private manageService: ManageUsersService) { }
 
@@ -27,6 +29,14 @@ export class GridViewComponent implements OnInit {
 
   deleteUser(index) {
     this.manageService.deleteUser(index);
+    this.showPopUp = !this.showPopUp;
   }
 
+  showPop(i: number) {
+    if (i >= 0) {
+      this.selectedUser = i;
+    }
+
+    this.showPopUp = !this.showPopUp;
+  }
 }

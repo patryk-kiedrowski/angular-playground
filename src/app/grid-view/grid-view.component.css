@@ -63,3 +63,79 @@ p
 {
   margin: 0;
 }
+
+
+.delete-pop-up {
+  /*height: 150px;
+  width: 300px;*/
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+
+  background: white;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+  border-radius: 5px;
+  padding: 25px 50px;
+
+  transition: height 2000ms;
+}
+
+.pop-up-header {
+  text-align: center;
+}
+
+.button-container {
+  margin: 0 auto;
+  width: 260px;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  display: block;
+  margin: 20px auto 0px auto;
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+
+  border: 2px solid rgb(2, 194, 50);
+  background: white;
+  transition: all 100ms linear;
+}
+
+.yes {
+  border: 2px solid rgb(2, 194, 50);
+  background: white;
+  transition: all 100ms linear;
+}
+
+.no {
+  border: 2px solid orangered;
+  background: white;
+  transition: all 100ms linear;
+}
+
+.yes:hover {
+  background: rgb(2, 194, 50);
+  color: white;
+}
+
+.no:hover {
+  background: orangered;
+  color: white;
+}
+
+.pop-up-shown {
+  width: 300px;
+  height: 150px;
+}
+

@@ -1,7 +1,7 @@
-<h1 style="text-align: center;">- ZROBIĆ POP-UP Z ZAPYTANIEM CZY NA PEWNO USUNĄĆ</h1>
+<h2 style="text-align: center;">- implement background blur on popup</h2>
 
 <div class="flex-parent">
-  <div *ngFor="let user of users; let i = index" class="flex-child" (click)="deleteUser(i)">
+  <div *ngFor="let user of users; let i = index" class="flex-child" (click)="showPop(i)">
     <h3 class="user-header" *ngIf="user.id !== undefined">{{user.name}} {{user.surname}}</h3>
 
     <div class="user-info-container" *ngIf="user.id !== undefined">
@@ -14,6 +14,18 @@
         <p>{{user.city}},</p>
         <p>{{user.street_number}} {{user.street}}</p>
       </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showPopUp" class="delete-pop-up" [ngClass]="(showPopUp)? 'pop-up-shown' : ''">
+
+  <div class="blur-background">
+    <h3 class="pop-up-header">Are you sure you want to delete this user?</h3>
+
+    <div class="button-container">
+      <button class="button yes" (click)="deleteUser(selectedUser)">YES</button>
+      <button class="button no" (click)="showPop(-1)">NO</button>
     </div>
   </div>
 </div>
