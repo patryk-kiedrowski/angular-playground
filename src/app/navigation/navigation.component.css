@@ -15,7 +15,7 @@
 
 .nav-link:hover
 {
-  color: orangered;
+  color: white;
 }
 
 ul
@@ -32,4 +32,15 @@ li
 {
   display: inline-block;
   margin: 0 20px;
+  border-radius: 5px;
+}
+
+li > a {
+  display: block;
+  padding: 10px 15px;
+
+}
+
+li:hover {
+  background: rgba(255,69,0, 0.8);
 }

@@ -66,3 +66,17 @@
   background: orangered;
   color: white;
 }
+
+.edit {
+  border: 2px solid lightskyblue;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.edit:hover {
+  background: lightskyblue;
+  color: white;
+}

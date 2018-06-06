@@ -23,6 +23,11 @@ export class ManageUsersService {
     return of(USERS);
   }
 
+  getUser(index: number) {
+    this.messageService.add('Fetched user' + index);
+    return USERS[index];
+  }
+
   addUser(user: User): void {
     // USERS.push(user);
     USERS.splice(user.id - 1, 0, user);
@@ -43,5 +48,9 @@ export class ManageUsersService {
       }
     }
     return USERS.length + 1;
+  }
+
+  updateUser(index: number, user: User) {
+    USERS[index] = user;
   }
 }

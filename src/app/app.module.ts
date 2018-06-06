@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { GridViewComponent } from './grid-view/grid-view.component';
 import { ViewEncapsulation } from '@angular/core';
 import { MessagesComponent } from './messages/messages.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { MessagesComponent } from './messages/messages.component';
     UserListComponent,
     GridViewComponent,
     MessagesComponent,
+    EditUserComponent,
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,9 @@
           <span class="attribute">email:</span> {{user.email}}
         </li>
         <button class="delete-user"  (click)="deleteUser(i)">delete</button>
+        <a routerLink="/edit-user/{{i}}">
+          <button class="delete-user edit">edit</button>
+        </a>
       </ul>
     </li>
   </ol>

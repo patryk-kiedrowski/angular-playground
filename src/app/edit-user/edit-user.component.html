@@ -1,0 +1,14 @@
+<h2 class="page-header">Edit user:</h2>
+<form>
+  <input [(ngModel)]="user.name" placeholder="name" name="name">
+  <input [(ngModel)]="user.surname" placeholder="surname" name="surname">
+  <input [(ngModel)]="user.sex" placeholder="gender" name="gender">
+  <input [(ngModel)]="user.email" placeholder="email" name="email">
+  <input [(ngModel)]="user.city" placeholder="city" name="city">
+  <input [(ngModel)]="user.street" placeholder="street" name="street">
+  <input [(ngModel)]="user.street_number" placeholder="street number" name="street number">
+
+  <button class="add-user" (click)="updateUser()">edit user</button>
+</form>
+
+<app-messages></app-messages>
