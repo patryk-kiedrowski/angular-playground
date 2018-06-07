@@ -18,73 +18,77 @@
 
 <h2 class="page-header">Add a new user:</h2>
 <!-- REACTIVE FROM VALIDATION -->
-<form [formGroup]="editForm">
 
-  <div class="form-group">
-    <input [ngClass]="(name.invalid == true && name.touched)? 'invalid' : ''" class="form-control" placeholder="name" formControlName="name">
+<div class="add-user-wrapper">
+  <form [formGroup]="editForm">
 
-    <input [ngClass]="(surname.invalid == true && surname.touched)? 'invalid' : ''"  class="form-control" placeholder="surname" formControlName="surname">
+    <div class="form-group">
+      <input [ngClass]="(name.invalid == true && name.touched)? 'invalid' : ''" class="form-control" placeholder="name" formControlName="name">
 
-    <!--<input class="form-control" placeholder="sex" formControlName="sex">-->
+      <input [ngClass]="(surname.invalid == true && surname.touched)? 'invalid' : ''"  class="form-control" placeholder="surname" formControlName="surname">
 
-    <select [ngClass]="(sex.invalid == true && sex.touched)? 'invalid' : ''"  class="form-control select" formControlName="sex">
-      <option value="" disabled selected>gender</option>
-      <option>male</option>
-      <option>female</option>
-    </select>
+      <!--<input class="form-control" placeholder="sex" formControlName="sex">-->
 
-    <input [ngClass]="(email.invalid == true && email.touched)? 'invalid' : ''"  class="form-control" placeholder="email" formControlName="email">
+      <select [ngClass]="(sex.invalid == true && sex.touched)? 'invalid' : ''"  class="form-control select" formControlName="sex">
+        <option value="" disabled selected>gender</option>
+        <option>male</option>
+        <option>female</option>
+      </select>
 
-    <input [ngClass]="(city.invalid == true && city.touched)? 'invalid' : ''"  class="form-control" placeholder="city" formControlName="city">
+      <input [ngClass]="(email.invalid == true && email.touched)? 'invalid' : ''"  class="form-control" placeholder="email" formControlName="email">
 
-    <input [ngClass]="(street.invalid == true && street.touched)? 'invalid' : ''"  class="form-control" placeholder="street" formControlName="street">
+      <input [ngClass]="(city.invalid == true && city.touched)? 'invalid' : ''"  class="form-control" placeholder="city" formControlName="city">
 
-    <input [ngClass]="(street_number.invalid == true && street_number.touched)? 'invalid' : ''"  class="form-control" placeholder="street_number" formControlName="street_number">
+      <input [ngClass]="(street.invalid == true && street.touched)? 'invalid' : ''"  class="form-control" placeholder="street" formControlName="street">
 
-    <button class="add-user" (click)="addUserReactively()">add user</button>
-  </div>
+      <input [ngClass]="(street_number.invalid == true && street_number.touched)? 'invalid' : ''"  class="form-control" placeholder="street_number" formControlName="street_number">
 
-</form>
+      <button class="add-user" (click)="addUserReactively()">add user</button>
+    </div>
 
-<!--<p>Name value: {{ editForm.value | json }}</p>
-<p>Form status: {{ editForm.status | json }}</p>-->
+  </form>
 
-<!-- TEMPLATE-DRIVEN CARD PREVIEW START -->
+  <!--<p>Name value: {{ editForm.value | json }}</p>
+  <p>Form status: {{ editForm.status | json }}</p>-->
 
-<!--<h2 class="page-header">New user card preview:</h2>
+  <!-- TEMPLATE-DRIVEN CARD PREVIEW START -->
 
-<div class="new-user-container">
-  <h3 class="user-header">{{newUser.name}} {{newUser.surname}}</h3>
+  <!--<h2 class="page-header">New user card preview:</h2>
 
-  <div class="user-info-container">
-    <img *ngIf="newUser.sex === 'female'" class="avatar" src="http://newsroom.almonds.com/sites/default/files/2015-12/avatar-placeholder-female_6_0.jpg" />
+  <div class="new-user-container">
+    <h3 class="user-header">{{newUser.name}} {{newUser.surname}}</h3>
 
-    <img *ngIf="newUser.sex === 'male'" class="avatar" src="https://s.financesonline.com/media/themes/apps/images/img_placeholder_avatar.jpg" />
-    <div class="user-info">
-      <p *ngIf="newUser.email">{{newUser.email}}</p>
-      <p *ngIf="newUser.city"><strong>Address:</strong></p>
-      <p *ngIf="newUser.city">{{newUser.city}},</p>
-      <p *ngIf="newUser.street">{{newUser.street_number}} {{newUser.street}}</p>
+    <div class="user-info-container">
+      <img *ngIf="newUser.sex === 'female'" class="avatar" src="http://newsroom.almonds.com/sites/default/files/2015-12/avatar-placeholder-female_6_0.jpg" />
+
+      <img *ngIf="newUser.sex === 'male'" class="avatar" src="https://s.financesonline.com/media/themes/apps/images/img_placeholder_avatar.jpg" />
+      <div class="user-info">
+        <p *ngIf="newUser.email">{{newUser.email}}</p>
+        <p *ngIf="newUser.city"><strong>Address:</strong></p>
+        <p *ngIf="newUser.city">{{newUser.city}},</p>
+        <p *ngIf="newUser.street">{{newUser.street_number}} {{newUser.street}}</p>
+      </div>
+    </div>
+  </div>-->
+
+  <!-- TEMPLATE-DRIVEN CARD PREVIEW END -->
+
+  <div class="new-user-container">
+    <h3 class="user-header">{{editForm.value.name}} {{editForm.value.surname}}</h3>
+
+    <div class="user-info-container">
+      <img *ngIf="editForm.value.sex === 'female'" class="avatar" src="http://newsroom.almonds.com/sites/default/files/2015-12/avatar-placeholder-female_6_0.jpg" />
+
+      <img *ngIf="editForm.value.sex === 'male'" class="avatar" src="https://s.financesonline.com/media/themes/apps/images/img_placeholder_avatar.jpg" />
+      <div class="user-info">
+        <p *ngIf="editForm.value.email">{{editForm.value.email}}</p>
+        <p *ngIf="editForm.value.city"><strong>Address:</strong></p>
+        <p *ngIf="editForm.value.city">{{editForm.value.city}},</p>
+        <p *ngIf="editForm.value.street">{{editForm.value.street_number}} {{editForm.value.street}}</p>
+      </div>
     </div>
   </div>
-</div>-->
 
-<!-- TEMPLATE-DRIVEN CARD PREVIEW END -->
-
-<div class="new-user-container">
-  <h3 class="user-header">{{editForm.value.name}} {{editForm.value.surname}}</h3>
-
-  <div class="user-info-container">
-    <img *ngIf="editForm.value.sex === 'female'" class="avatar" src="http://newsroom.almonds.com/sites/default/files/2015-12/avatar-placeholder-female_6_0.jpg" />
-
-    <img *ngIf="editForm.value.sex === 'male'" class="avatar" src="https://s.financesonline.com/media/themes/apps/images/img_placeholder_avatar.jpg" />
-    <div class="user-info">
-      <p *ngIf="editForm.value.email">{{editForm.value.email}}</p>
-      <p *ngIf="editForm.value.city"><strong>Address:</strong></p>
-      <p *ngIf="editForm.value.city">{{editForm.value.city}},</p>
-      <p *ngIf="editForm.value.street">{{editForm.value.street_number}} {{editForm.value.street}}</p>
-    </div>
-  </div>
 </div>
 
 <app-messages></app-messages>

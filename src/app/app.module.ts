@@ -13,6 +13,7 @@ import { ViewEncapsulation } from '@angular/core';
 import { MessagesComponent } from './messages/messages.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { DetailViewComponent } from './detail-view/detail-view.component';
+import { TableViewComponent } from './table-view/table-view.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { DetailViewComponent } from './detail-view/detail-view.component';
     MessagesComponent,
     EditUserComponent,
     DetailViewComponent,
+    TableViewComponent,
   ],
   imports: [
     BrowserModule,

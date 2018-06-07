@@ -1,6 +1,8 @@
-form
-{
-  margin-bottom: 50px;
+.add-user-wrapper {
+  width: 50vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 input, .select
@@ -25,9 +27,9 @@ input:focus
 .new-user-container
 {
   width: 300px;
+  height: 110px;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
   display: block;
-  margin: 0 auto;
   background: white;
   border-radius: 0px 0px 5px 5px;
 }
@@ -78,6 +80,7 @@ input:focus
 p
 {
   margin: 0;
+  font-size: 14px;
 }
 
 .add-user

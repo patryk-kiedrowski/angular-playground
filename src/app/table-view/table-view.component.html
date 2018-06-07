@@ -1,0 +1,25 @@
+<div class="table-wrapper">
+  <table>
+    <tr>
+      <th>Id.</th>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Gender</th>
+      <th>Email</th>
+      <th>City</th>
+      <th>Street no.</th>
+      <th>Street</th>
+    </tr>
+
+    <tr *ngFor="let user of users; let i = index">
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.surname}}</td>
+      <td>{{user.sex}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.city}}</td>
+      <td>{{user.street_number}}</td>
+      <td>{{user.street}}</td>
+    </tr>
+  </table>
+</div>

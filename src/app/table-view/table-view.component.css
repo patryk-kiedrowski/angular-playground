@@ -1,0 +1,15 @@
+.table-wrapper {
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+}
+
+td, th {
+  padding: 5px 10px;
+  border: 1px solid black;
+}
+
+th {
+  text-align: left;
+}
+

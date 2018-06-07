@@ -1,5 +1,7 @@
   <h2 class="list-header">List of users:</h2>
 
+  <p style="text-align: center;">- rebuild into a table</p>
+
   <ol class="parent-list">
     <li *ngFor="let user of users; let i = index">
       <ul class="child-list">
@@ -10,10 +12,12 @@
         <li class="user-info">
           <span class="attribute">email:</span> {{user.email}}
         </li>
-        <button class="delete-user"  (click)="showPop(i)">delete</button>
-        <a routerLink="/edit-user/{{i}}">
-          <button class="delete-user edit">edit</button>
-        </a>
+        <div class="button-container">
+          <a routerLink="/edit-user/{{i}}">
+            <button class="delete-user edit">edit</button>
+          </a>
+          <button class="delete-user"  (click)="showPop(i)">delete</button>
+        </div>
       </ul>
     </li>
   </ol>
