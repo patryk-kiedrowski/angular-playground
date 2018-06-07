@@ -12,6 +12,7 @@ import { GridViewComponent } from './grid-view/grid-view.component';
 import { ViewEncapsulation } from '@angular/core';
 import { MessagesComponent } from './messages/messages.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { DetailViewComponent } from './detail-view/detail-view.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { EditUserComponent } from './edit-user/edit-user.component';
     GridViewComponent,
     MessagesComponent,
     EditUserComponent,
+    DetailViewComponent,
   ],
   imports: [
     BrowserModule,

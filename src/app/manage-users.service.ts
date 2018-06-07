@@ -34,6 +34,7 @@ export class ManageUsersService {
   }
 
   deleteUser(index: number): void {
+    // BUG: when deleting first person continously, the free id is still 1
     USERS.splice(index, 1);
     this.messageService.add('User deleted successfully, free id: ' + (index + 1));
   }
@@ -51,5 +52,6 @@ export class ManageUsersService {
 
   updateUser(index: number, user: User) {
     USERS[index] = user;
+    this.messageService.add('User ' + index + ' edited successfully');
   }
 }

@@ -1,0 +1,37 @@
+<div id="background">
+</div>
+
+<div id="content">
+  <div class="column left">
+    <img *ngIf="users[index].sex === 'female'" src="https://source.unsplash.com/480x480/?woman" />
+
+    <img *ngIf="users[index].sex === 'male'" src="https://source.unsplash.com/480x480/?man" />
+  </div>
+
+
+  <div class="column right">
+    <h1 class="user-name">{{users[index].name}} {{users[index].surname}}</h1>
+
+    <div class="text-icon-container">
+      <i class="material-icons" id="email-icon">email</i>
+      <p class="user-info">{{users[index].email}}</p>
+    </div>
+
+    <div class="text-icon-container">
+      <i class="material-icons" id="location-icon">location_on</i>
+      <h3 class="address">Address:</h3>
+    </div>
+
+    <blockquote>
+      <p class="user-info"><strong>City:</strong> {{users[index].city}}</p>
+      <p class="user-info"><strong>Street:</strong> {{users[index].street_number}} {{users[index].street}}</p>
+    </blockquote>
+
+    <div class="text-icon-container">
+      <i class="material-icons" id="create-icon">create</i>
+      <h3 class="bio-header">Biography:</h3>
+    </div>
+
+    <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, dolores culpa reprehenderit fugit expedita, iure ipsam eaque perferendis, laudantium explicabo autem nihil nam ex modi nisi cumque libero? Hic ratione similique quidem tempora modi alias nihil cumque obcaecati? Eos numquam fugiat nesciunt assumenda illum alias deleniti autem sed sequi deserunt dolorum esse nam, ipsam qui. Delectus magnam nihil repellendus assumenda.</p>
+  </div>
+</div>

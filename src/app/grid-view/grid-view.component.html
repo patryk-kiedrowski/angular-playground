@@ -1,5 +1,5 @@
 <div class="flex-parent">
-  <div *ngFor="let user of users; let i = index" class="flex-child" (click)="showPop(i)">
+  <div *ngFor="let user of users; let i = index" class="flex-child">
     <h3 class="user-header" *ngIf="user.id !== undefined">{{user.name}} {{user.surname}}</h3>
 
     <div class="user-info-container" *ngIf="user.id !== undefined">
@@ -12,6 +12,12 @@
         <p>{{user.city}},</p>
         <p>{{user.street_number}} {{user.street}}</p>
       </div>
+    </div>
+    <div class="button-container" style="margin-bottom: 20px;">
+      <a routerLink="/detail-view/{{i}}">
+        <button class="button yes" >details</button>
+      </a>
+      <button class="button no" (click)="showPop(i)">delete</button>
     </div>
   </div>
 </div>
