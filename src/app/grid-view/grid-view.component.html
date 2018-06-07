@@ -1,5 +1,3 @@
-<h2 style="text-align: center;">- implement background blur on popup</h2>
-
 <div class="flex-parent">
   <div *ngFor="let user of users; let i = index" class="flex-child" (click)="showPop(i)">
     <h3 class="user-header" *ngIf="user.id !== undefined">{{user.name}} {{user.surname}}</h3>
@@ -18,9 +16,8 @@
   </div>
 </div>
 
-<div *ngIf="showPopUp" class="delete-pop-up" [ngClass]="(showPopUp)? 'pop-up-shown' : ''">
-
-  <div class="blur-background">
+<div *ngIf="showPopUp" class="blur-background">
+  <div class="delete-pop-up" [ngClass]="(showPopUp)? 'pop-up-shown' : ''">
     <h3 class="pop-up-header">Are you sure you want to delete this user?</h3>
 
     <div class="button-container">

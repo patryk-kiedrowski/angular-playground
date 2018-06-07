@@ -25,7 +25,7 @@ export class EditUserComponent implements OnInit {
     private location: Location,
     private formBuilder: FormBuilder
   ) {
-    this.createForm();
+    // this.createForm();
   }
 
   ngOnInit(): void {
@@ -41,7 +41,7 @@ export class EditUserComponent implements OnInit {
     this.manageService.updateUser(this.index, this.user);
   }
 
-  createForm() {
+  /*createForm() {
     this.editForm = this.formBuilder.group({
       name: '',
       surname: '',
@@ -50,7 +50,7 @@ export class EditUserComponent implements OnInit {
       city: '',
       street: '',
       street_number: ''
-    });
+    });*/
 
     /* DOESN'T WANT TO WORK; USED TO POPULATE FORMS WITH VALUES
       this.editForm.setValue({
@@ -62,6 +62,6 @@ export class EditUserComponent implements OnInit {
       street: this.user.street,
       street_number: this.user.street_number
     });
-    */
-  }
+
+  }*/
 }

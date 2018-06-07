@@ -10,6 +10,8 @@ import { ManageUsersService } from '../manage-users.service';
 export class UserListComponent implements OnInit {
 
   users: User[];
+  showPopUp = false;
+  selectedUser: number;
 
   constructor(private manageService: ManageUsersService) { }
 
@@ -27,6 +29,15 @@ export class UserListComponent implements OnInit {
 
   deleteUser(index) {
     this.manageService.deleteUser(index);
+    this.showPopUp = !this.showPopUp;
     console.log(this.users.length);
+  }
+
+  showPop(i: number) {
+    if (i >= 0) {
+      this.selectedUser = i;
+    }
+
+    this.showPopUp = !this.showPopUp;
   }
 }

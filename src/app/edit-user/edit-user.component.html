@@ -1,17 +1,39 @@
 <h2 class="page-header">Edit user:</h2>
-<form>
-  <input [(ngModel)]="user.name" placeholder="name" name="name">
-  <input [(ngModel)]="user.surname" placeholder="surname" name="surname">
-  <input [(ngModel)]="user.sex" placeholder="gender" name="gender">
-  <input [(ngModel)]="user.email" placeholder="email" name="email">
-  <input [(ngModel)]="user.city" placeholder="city" name="city">
-  <input [(ngModel)]="user.street" placeholder="street" name="street">
-  <input [(ngModel)]="user.street_number" placeholder="street number" name="street number">
+<!-- TEMPLATE-DRIVEN FORM VALIDATION -->
+<form #editUserForm="ngForm">
+  <input [(ngModel)]="user.name" placeholder="name" name="name"
+  required minlength="3" id="name" [ngClass]="(name.invalid)? 'invalid': ''" #name="ngModel" pattern="[^0-9]*">
 
-  <button class="add-user" (click)="updateUser()">edit user</button>
+  <input [(ngModel)]="user.surname" placeholder="surname" name="surname"
+  required minlength="2" id="surname" [ngClass]="(surname.invalid)? 'invalid': ''" #surname="ngModel" pattern="[^0-9]*">
+
+  <!--<input [(ngModel)]="user.sex" placeholder="gender" name="gender">-->
+  <select [(ngModel)]="user.sex" name="sex"
+   required [ngClass]="(sex.invalid)? 'invalid' : ''" #sex="ngModel" class="select" >
+
+    <option value="" disabled selected>gender</option>
+    <option>male</option>
+    <option>female</option>
+  </select>
+
+  <input [(ngModel)]="user.email" placeholder="email" name="email"
+  required minlength="4" id="email" type="email" [ngClass]="(email.invalid)? 'invalid': ''" #email="ngModel" pattern="[^ @]*@[^ @]*">
+
+  <input [(ngModel)]="user.city" placeholder="city" name="city"
+  required minlength="3" id="city" [ngClass]="(city.invalid)? 'invalid' : ''" #city="ngModel" pattern="[^0-9]*">
+
+  <input [(ngModel)]="user.street" placeholder="street" name="street"
+  required minlength="3" id="street" [ngClass]="(street.invalid)? 'invalid' : ''" #street="ngModel" pattern="[^0-9]*">
+
+  <input [(ngModel)]="user.street_number" placeholder="street number" name="street number"
+  required id="street_number" [ngClass]="(street_number.invalid)? 'invalid' : ''" #street_number="ngModel">
+
+  <button class="add-user" (click)="updateUser()" [disabled]="editUserForm.invalid">confirm</button>
 </form>
 
-<form [formGroup]="editForm">
+<p class="form-status" *ngIf="editUserForm.invalid">fill all inputs with correct data</p>
+
+<!--<form [formGroup]="editForm">
 
   <div class="form-group">
     <input class="form-control" placeholder="name" formControlName="name">
@@ -27,6 +49,6 @@
 
 </form>
 
-<p>Name value: {{ editForm.value | json }}</p>
+<p>Name value: {{ editForm.value | json }}</p>-->
 
 <app-messages></app-messages>
