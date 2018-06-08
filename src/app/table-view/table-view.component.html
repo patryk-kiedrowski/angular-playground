@@ -1,6 +1,6 @@
 <div class="table-wrapper">
   <table>
-    <tr>
+    <tr class="table-header">
       <th>Id.</th>
       <th>Name</th>
       <th>Surname</th>
@@ -9,17 +9,34 @@
       <th>City</th>
       <th>Street no.</th>
       <th>Street</th>
+      <th>Details</th>
+      <th>Edit</th>
+      <th>Delete</th>
     </tr>
 
-    <tr *ngFor="let user of users; let i = index">
-      <td>{{user.id}}</td>
+    <tr *ngFor="let user of users; let i = index" [ngClass]="((i+1) % 2 === 0)? 'even' : 'odd'">
+      <td class="number">{{user.id}}</td>
       <td>{{user.name}}</td>
       <td>{{user.surname}}</td>
       <td>{{user.sex}}</td>
       <td>{{user.email}}</td>
       <td>{{user.city}}</td>
-      <td>{{user.street_number}}</td>
+      <td class="number">{{user.street_number}}</td>
       <td>{{user.street}}</td>
+      <td class="icon"><a routerLink="/detail-view/{{i}}"><i class="material-icons">launch</i></a></td>
+      <td class="icon"><a routerLink="/edit-user/{{i}}"><i class="material-icons">build</i></a></td>
+      <td class="icon"><i class="material-icons delete" (click)="showPop(i)">delete</i></td>
     </tr>
   </table>
+</div>
+
+<div *ngIf="showPopUp" class="blur-background">
+  <div class="delete-pop-up" [ngClass]="(showPopUp)? 'pop-up-shown' : ''">
+    <h3 class="pop-up-header">Are you sure you want to delete this user?</h3>
+
+    <div class="button-container">
+      <button class="button neutral" (click)="deleteUser(selectedUser)">YES</button>
+      <button class="button neutral" (click)="showPop(-1)">NO</button>
+    </div>
+  </div>
 </div>

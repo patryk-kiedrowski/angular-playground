@@ -16,7 +16,7 @@ a {
 }
 
 a:hover {
-  color: orangered;
+  color: #78BBFF;
 }
 
 .nav-link
@@ -57,7 +57,7 @@ li > a {
 }
 
 li:hover {
-  background: rgba(255,69,0, 0.8);
+  background: #78BBFF;
 }
 
 .logo {

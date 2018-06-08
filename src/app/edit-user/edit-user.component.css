@@ -5,8 +5,8 @@ form
 
 input, .select
 {
-  width: 200px;
-  height: 30px;
+  width: 300px;
+  height: 40px;
   display: block;
   margin: 0px auto 10px auto;
   box-sizing: border-box;
@@ -30,7 +30,7 @@ input:focus
   width: 100px;
   height: 30px;
 
-  border: 2px solid rgb(2, 194, 50);
+  border: 2px solid #78BBFF;
   background: transparent;
   transition: all 100ms linear;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
@@ -39,7 +39,7 @@ input:focus
 
 .add-user:hover
 {
-  background: rgb(2, 194, 50);
+  background: #78BBFF;
   color: white;
 }
 

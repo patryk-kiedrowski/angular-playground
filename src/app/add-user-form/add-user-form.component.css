@@ -7,8 +7,8 @@
 
 input, .select
 {
-  width: 200px;
-  height: 30px;
+  width: 300px;
+  height: 40px;
   display: block;
   margin: 0px auto 10px auto;
   box-sizing: border-box;
@@ -17,6 +17,7 @@ input, .select
   border: none;
   border-left: 4px solid #2c2c2c;
   box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+  font-size: 16px;
 }
 
 input:focus
@@ -85,14 +86,16 @@ p
 
 .add-user
 {
-  display: block;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   margin: 20px auto 0px auto;
   cursor: pointer;
-  width: 100px;
-  height: 30px;
+  width: 150px;
+  height: 40px;
   border-radius: 4px;
 
-  border: 2px solid rgb(2, 194, 50);
+  border: 2px solid #78BBFF;
   background: white;
   transition: all 100ms linear;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
@@ -100,11 +103,15 @@ p
 
 .add-user:hover
 {
-  background: rgb(2, 194, 50);
+  background: #78BBFF;
   color: white;
 }
 
 .page-header
 {
   text-align: center;
+}
+
+.material-icons {
+  margin-left: -5px;
 }

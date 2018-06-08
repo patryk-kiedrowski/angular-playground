@@ -9,7 +9,7 @@ import { DetailViewComponent } from './detail-view/detail-view.component';
 import { TableViewComponent } from './table-view/table-view.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'list-view', pathMatch: 'full' },
+  { path: '', redirectTo: 'grid-view', pathMatch: 'full' },
   { path: 'list-view', component: UserListComponent },
   { path: 'add-user', component: AddUserFormComponent },
   { path: 'grid-view', component: GridViewComponent },
