@@ -14,6 +14,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { DetailViewComponent } from './detail-view/detail-view.component';
 import { TableViewComponent } from './table-view/table-view.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { TableViewComponent } from './table-view/table-view.component';
     EditUserComponent,
     DetailViewComponent,
     TableViewComponent,
+    LandingPageComponent,
   ],
   imports: [
     BrowserModule,

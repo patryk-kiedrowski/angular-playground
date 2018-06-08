@@ -7,9 +7,11 @@ import { GridViewComponent } from './grid-view/grid-view.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { DetailViewComponent } from './detail-view/detail-view.component';
 import { TableViewComponent } from './table-view/table-view.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'grid-view', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: LandingPageComponent },
   { path: 'list-view', component: UserListComponent },
   { path: 'add-user', component: AddUserFormComponent },
   { path: 'grid-view', component: GridViewComponent },
