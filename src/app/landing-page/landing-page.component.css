@@ -20,6 +20,9 @@
 
 .right {
   width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .right::before {
@@ -91,3 +94,7 @@ a {
   font-size: 36px;
 }
 
+.data-img {
+  position: relative;
+  z-index: 100;
+}
